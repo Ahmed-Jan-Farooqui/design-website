@@ -1,10 +1,8 @@
 import { Button, MenuItem, TextField, useMediaQuery } from "@mui/material";
 import "./BookATable.css";
-import { useState } from "react";
 
 export default function BookATable() {
   const isSmallScreen = useMediaQuery("(max-width:600px)");
-  const [numOfPeople, setNumOfPeople] = useState(0);
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   return (
     <div className="book-a-table-cntr">

@@ -1,5 +1,5 @@
 import "./HomePage.css";
-import { Button, ButtonGroup, colors, Menu, SvgIcon } from "@mui/material";
+import { Button } from "@mui/material";
 import PersonIcon from "@mui/icons-material/Person";
 import HeadsetMicIcon from "@mui/icons-material/HeadsetMic";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
