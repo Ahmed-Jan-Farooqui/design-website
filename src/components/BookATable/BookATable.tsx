@@ -68,11 +68,10 @@ export default function BookATable() {
           </TextField>
         </div>
         <TextField
-          fullWidth
           multiline
           minRows={3}
           sx={{
-            width: `${isSmallScreen ? "90%" : "45%"}`,
+            width: `${isSmallScreen ? "90%" : "94%"}`,
             margin: "10px",
             color: "#fff",
             backgroundColor: "#fff",
