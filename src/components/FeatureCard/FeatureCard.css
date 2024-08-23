@@ -1,0 +1,28 @@
+.feature-card-cntr {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow with offset, blur, and color */
+    transition: box-shadow 0.3s ease; 
+    margin: 20px;
+}
+
+.feature-card-cntr:hover {
+    background-color: #FEA116;
+    color: #fff;
+}
+
+.feature-card-cntr .feature-icon {
+    color: #FEA116;
+}
+.feature-card-cntr:hover .feature-icon {
+    color: #fff;
+}
+
+@media(max-width: 600px){
+    .feature-card-cntr {
+        width: 80%;
+    }
+}

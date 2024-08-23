@@ -1,0 +1,40 @@
+.menu-selection {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-selection:hover {
+    cursor: pointer;
+}
+.menu-selection:hover svg {
+    color:  #bd7200;
+}
+
+.menu-selection-horizontal-line,
+.menu-selection-horizontal-line-highlight {
+    width: 100%;
+    height: 2px; /* Set the same height for both */
+    background-color: gray;
+    margin: 0; /* Remove margins */
+}
+
+.menu-selection-horizontal-line-highlight {
+    background-color: #FEA116;
+}
+
+.menu-selection-badge-cntr {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 0;
+}
+.menu-selection-badge-cntr svg {
+    color: #FEA116
+}
+
+.menu-selection-txt-cntr {
+    padding: 0 10px;
+    margin: 0;
+}

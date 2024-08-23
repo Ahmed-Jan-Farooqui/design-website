@@ -1,0 +1,159 @@
+.home-page-cntr {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Poppins", "Arial", sans-serif;
+}
+.restaurant-cntr {
+    height: 0.8;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(#0F172BE5, #0F172BE5), url("https://www.figma.com/file/m8B5KY7qVgB06usK4E9WV9/image/334adf2378de1412e4e938dfd5255943f55c8097");
+    background-size: cover;
+    background-position: center;
+    background-color:#0F172BE5;
+    color: #fff;
+    font-family: "Poppins", "Arial", sans-serif;
+}
+
+
+.intro-cntr {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro-txt{
+    margin-left: 100px;
+    overflow-wrap: break-word;
+    font-size: medium;
+}
+
+.meal-img {
+    margin: 100px;
+    width: 35%;
+    height: auto;
+}
+
+.feature-cntr {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.team-members-cntr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.team-members-title-cntr {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 0;
+}
+
+.team-members-horizontal-line {
+    flex-grow: 0.1; 
+    height: 2px;
+    background-color: #FEA116;
+    margin: 0 10px; 
+}
+
+.team-members-stylized {
+    color: #FEA116;
+    font-family: cursive;
+    font-size: x-large;
+}   
+
+.chefs-cntr {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-cntr {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-title-cntr {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-horizontal-line {
+    flex-grow: 0.04; 
+    height: 2px;
+    background-color: #FEA116;
+    margin: 0 10px; 
+}
+
+.testimonial-stylized {
+    color: #FEA116;
+    font-family: cursive;
+    font-size: x-large;
+}   
+
+.reviews-cntr {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+
+@media (max-width: 600px){
+    .restaurant-cntr {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .intro-cntr {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 300px;
+        padding-top: 50px;
+    }
+
+    .feature-cntr {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .chefs-cntr {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .reviews-cntr {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

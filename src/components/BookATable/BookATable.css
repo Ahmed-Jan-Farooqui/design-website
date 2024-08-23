@@ -1,0 +1,53 @@
+.book-a-table-cntr {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #0F172B;
+}
+.book-a-table-cntr img {
+    width: 55%;
+    height: auto;
+}
+
+.stylized-res-cntr {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.booking-form-cntr {
+    color: #fff;
+}
+.booking-form-cntr h1 {
+    margin: 10px;
+}
+
+
+.stylized-res {
+    color: #FEA116;
+    font-family: cursive;
+    font-size: x-large;
+    margin-left: 10px;
+}
+
+.book-a-table-horizontal-line {
+    flex-grow: 0.15;
+    height: 2px;
+    background-color: #FEA116; 
+    margin-left: 5px;
+}
+
+@media(max-width: 600px){
+    .book-a-table-cntr {
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 50px;
+        margin-top: 50px;
+    }
+
+    .book-a-table-cntr img {
+        width: 100%;
+    }
+}

@@ -1,0 +1,108 @@
+.about-us-cntr {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.about-us-imgs-cntr {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-us-img-row-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.about-us-img-row-2 {
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: center;
+}
+
+.about-us-img-row-1 .item-1 {
+    width: 60%;
+    height: 60%;
+    padding: 10px;
+}
+.about-us-img-row-2 .item-2 {
+    width: 60%;
+    height: 60%;
+    padding: 10px;
+}
+
+.about-us-img-row-2 .item-1 {
+    width: 35%;
+    height: 35%;
+    padding: 10px;
+}
+.about-us-img-row-1 .item-2 {
+    width: 35%;
+    height: 35%;
+    padding: 10px;
+}
+
+.stylized-about-us {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Pacifico', 'Arial', sans-serif;
+    font-family: cursive;
+    font-size: x-large;
+    color: #FEA116;
+}
+
+.horizontal-line {
+    flex-grow: 0.25;     /* Makes the line take up remaining space */
+    height: 2px; /* Thickness of the line */
+    background-color: #FEA116; /* Color of the line */
+    margin-left: 10px; /* Space between the text and the line */
+}
+
+.vertical-line {
+    width: 5px; 
+    height: 50px; 
+    background-color: #FEA116; 
+    margin-right: 5px;
+}
+
+.info-cntr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.experience-cntr, .chef-num-cntr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.experience-cntr p, .chef-num-cntr p {
+    padding: 10px;
+}
+.experience-cntr h1, .chef-num-cntr h1 {
+    color: #FEA116;
+}
+
+@media (max-width: 600px){
+    .about-us-cntr {
+        margin-top: 100px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .info-cntr {
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    .experience-cntr, .chef-num-cntr {
+        justify-content: start;
+    }
+}
