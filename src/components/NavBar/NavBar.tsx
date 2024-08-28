@@ -10,7 +10,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-export default function NavBar({ current }: any) {
+export default function NavBar({ current, menuRef, bookATableRef }: any) {
   const navigate = useNavigate();
   const isSmallScreen = useMediaQuery("(max-width:600px)");
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -21,6 +21,10 @@ export default function NavBar({ current }: any) {
 
   const handleMenuClose = () => {
     setAnchorEl(null);
+  };
+
+  const scrollToSection = (ref: any) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -40,7 +44,11 @@ export default function NavBar({ current }: any) {
               },
             }}
             onClick={() => {
-              navigate("/");
+              if (current === "home") {
+                scrollToSection(menuRef);
+              } else {
+                navigate("/");
+              }
             }}
           >
             Home
@@ -66,6 +74,13 @@ export default function NavBar({ current }: any) {
               "&:hover": {
                 backgroundColor: "#bd7200",
               },
+            }}
+            onClick={() => {
+              if (current === "home") {
+                scrollToSection(bookATableRef);
+              } else {
+                navigate("/");
+              }
             }}
           >
             Book A Table

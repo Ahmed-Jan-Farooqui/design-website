@@ -1,4 +1,12 @@
-import { Button, SvgIcon, TextField, useMediaQuery } from "@mui/material";
+import {
+  Button,
+  Dialog,
+  DialogActions,
+  DialogTitle,
+  SvgIcon,
+  TextField,
+  useMediaQuery,
+} from "@mui/material";
 import NavBar from "../NavBar/NavBar";
 import "./ContactPage.css";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
@@ -8,10 +16,17 @@ import ScrollToTopButton from "../ScrollToTopButton/ScrollToTopButton";
 
 export default function ContactPage() {
   const isSmallScreen = useMediaQuery("(max-width:600px)");
+  const [openConfirm, setOpenConfirm] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const handleClose = () => {
+    setOpenConfirm(false);
+  };
+  const handleOpen = () => {
+    setOpenConfirm(true);
+  };
   return (
     <div className="contact-page-cntr">
       <div className="contact-cntr">
@@ -91,7 +106,7 @@ export default function ContactPage() {
             <TextField
               type="email"
               id="last-name"
-              label="Last Name"
+              label="Email"
               value={email}
               onChange={(e) => {
                 e.preventDefault();
@@ -137,6 +152,7 @@ export default function ContactPage() {
             <Button
               className="form-submit-btn"
               variant="contained"
+              onClick={handleOpen}
               sx={{
                 backgroundColor: "#FEA116",
                 color: "#FFFFFF",
@@ -150,6 +166,34 @@ export default function ContactPage() {
             </Button>
           </div>
         </div>
+        <Dialog open={openConfirm} onClose={handleClose}>
+          <DialogTitle>Send Message?</DialogTitle>
+          <DialogActions>
+            <Button
+              variant="outlined"
+              onClick={handleClose}
+              sx={{
+                color: "#FEA116",
+                "&:hover": {},
+              }}
+            >
+              SEND
+            </Button>
+            <Button
+              variant="contained"
+              onClick={handleClose}
+              sx={{
+                backgroundColor: "#FEA116",
+                color: "#FFFFFF",
+                "&:hover": {
+                  backgroundColor: "#bd7200",
+                },
+              }}
+            >
+              CANCEL
+            </Button>
+          </DialogActions>
+        </Dialog>
         <ScrollToTopButton />
         <Footer />
       </div>

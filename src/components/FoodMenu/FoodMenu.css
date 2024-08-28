@@ -49,5 +49,6 @@
     .menu-item-cntr {
         flex-wrap: nowrap;
         max-height: fit-content;
+        justify-content: start;
     }
 }

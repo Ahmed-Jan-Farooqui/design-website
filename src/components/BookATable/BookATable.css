@@ -18,6 +18,7 @@
 }
 
 .booking-form-cntr {
+    margin-left: 20px;
     color: #fff;
 }
 .booking-form-cntr h1 {
@@ -49,5 +50,9 @@
 
     .book-a-table-cntr img {
         width: 100%;
+    }
+
+    .booking-form-cntr {
+        margin-left: 0;
     }
 }

@@ -14,13 +14,25 @@ import Footer from "../Footer/Footer";
 import BookATable from "../BookATable/BookATable";
 import ChefCard from "../ChefCard/ChefCard";
 import TestimonialCard from "../TestimonialCard/TestimonialCard";
+import { useRef } from "react";
 
 export default function HomePage() {
+  const menuRef = useRef(null);
+  const bookATableRef = useRef(null);
+
+  const scrollToSection = (ref: any) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="home-page-cntr">
       <div className="restaurant-cntr">
         <div className="restaurant-title-cntr">
-          <NavBar current="home" />
+          <NavBar
+            current="home"
+            menuRef={menuRef}
+            bookATableRef={bookATableRef}
+          />
           <div className="intro-cntr">
             <div className="intro-txt">
               <h1>Enjoy Our Delicious Meal!</h1>
@@ -36,6 +48,9 @@ export default function HomePage() {
                   "&:hover": {
                     backgroundColor: "#bd7200",
                   },
+                }}
+                onClick={() => {
+                  scrollToSection(bookATableRef);
                 }}
               >
                 Book A Table
@@ -79,8 +94,12 @@ export default function HomePage() {
         />
       </div>
       <AboutUs />
-      <FoodMenu />
-      <BookATable />
+      <div ref={menuRef} className="food-menu-ref-cntr">
+        <FoodMenu />
+      </div>
+      <div ref={bookATableRef} className="book-a-table-ref-cntr">
+        <BookATable />
+      </div>
       <div className="team-members-cntr">
         <div className="team-members-title-cntr">
           <div className="team-members-horizontal-line"></div>

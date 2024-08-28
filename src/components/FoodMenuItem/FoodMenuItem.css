@@ -9,17 +9,18 @@
 .food-menu-item img {
     height: 25%;
     width: 25%;
-    border-radius: 10px;
+    border-radius: 0;
 }
 
 .food-menu-item-info-cntr {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 10px;
+    margin: 20px;
 }
 
 .food-menu-item-title {
+    font-size: small;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -45,5 +46,12 @@
     .food-menu-item {
         width: 100%;
         align-items: center;
+        margin: 0;
+    }
+
+    .food-menu-item img {
+        height: 50%;
+        width: 50%;
+        border-radius: 0;
     }
 }

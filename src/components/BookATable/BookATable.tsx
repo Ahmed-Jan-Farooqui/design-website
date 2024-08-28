@@ -1,9 +1,26 @@
-import { Button, MenuItem, TextField, useMediaQuery } from "@mui/material";
+import {
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  MenuItem,
+  TextField,
+  useMediaQuery,
+} from "@mui/material";
 import "./BookATable.css";
+import { useState } from "react";
 
 export default function BookATable() {
   const isSmallScreen = useMediaQuery("(max-width:600px)");
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  const [openConfirm, setOpenConfirm] = useState(false);
+  const handleClose = () => {
+    setOpenConfirm(false);
+  };
+  const handleOpen = () => {
+    setOpenConfirm(true);
+  };
   return (
     <div className="book-a-table-cntr">
       <img src="https://s3-alpha-sig.figma.com/img/29a6/d5d2/da1354841a4ded66d2ad911edef80b81?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lnrX3~cQwinxPZQAQYt36w6GrlEkuFy-lxse5iheWnFLAPpEQ2~JIaDcyk4Gc4RkT02a4Vi3WnY1LcP8SRa7ucAJXwbJQiu3ixVRKOfap6R5rJ7dEO6nH2WCcWyo6yueLSZ~eUWefczNYMHPFMuMANV378pDbahGEGAc85aMsjQ39sWmYNrCbg1e4oW~fHZADFeJNBv63pBU1HoOWK47wkXCdslzZ0oxNfFS8mCogSurB1zv0uQQlHXckvTc1XjWBkTOVNML9IB3s4ZTa-CvhKIkBTYHwK2CkSMRRKh2GeQSU4ueMKoa1sjsjBqANn56g0myukv~K04MuON5jM84xg__" />
@@ -83,11 +100,12 @@ export default function BookATable() {
         />
         <Button
           variant="contained"
+          onClick={handleOpen}
           sx={{
             backgroundColor: "#FEA116",
             color: "#fff",
             margin: "10px",
-            width: `${isSmallScreen ? "90%" : "45%"}`,
+            width: `${isSmallScreen ? "90%" : "94%"}`,
             "&:hover": {
               backgroundColor: "#bd7200",
             },
@@ -95,6 +113,37 @@ export default function BookATable() {
         >
           Book Now
         </Button>
+        <Dialog open={openConfirm} onClose={handleClose}>
+          <DialogTitle>Reservation</DialogTitle>
+          <DialogContent>
+            Would you like to confirm your reservation?
+          </DialogContent>
+          <DialogActions>
+            <Button
+              variant="outlined"
+              onClick={handleClose}
+              sx={{
+                color: "#FEA116",
+                "&:hover": {},
+              }}
+            >
+              CONFIRM
+            </Button>
+            <Button
+              variant="contained"
+              onClick={handleClose}
+              sx={{
+                backgroundColor: "#FEA116",
+                color: "#FFFFFF",
+                "&:hover": {
+                  backgroundColor: "#bd7200",
+                },
+              }}
+            >
+              CANCEL
+            </Button>
+          </DialogActions>
+        </Dialog>
       </div>
     </div>
   );

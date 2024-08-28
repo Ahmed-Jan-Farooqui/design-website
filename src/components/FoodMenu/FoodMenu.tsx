@@ -44,7 +44,7 @@ export default function FoodMenu() {
     setBreakfastMenu([...breakfastMenuTemp]);
     setLunchMenu([...lunchMenuTemp]);
     setDinnerMenu([...dinnerMenuTemp]);
-  });
+  }, []);
 
   return (
     <div className="menu-cntr">

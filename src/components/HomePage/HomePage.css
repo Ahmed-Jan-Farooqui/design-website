@@ -122,6 +122,14 @@
     margin-bottom: 50px;
 }
 
+.book-a-table-ref-cntr {
+    width: 100%;
+}
+
+.food-menu-ref-cntr {
+    width: 100%;
+}
+
 
 @media (max-width: 600px){
     .restaurant-cntr {
